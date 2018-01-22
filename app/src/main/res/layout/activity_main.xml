@@ -1,0 +1,214 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.github.wolandmaster.uniquepasswords.widgets.LockableScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/scroll_view"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.github.wolandmaster.uniquepasswords.activities.MainActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingBottom="16dp"
+        android:paddingLeft="16dp"
+        android:paddingRight="16dp"
+        android:paddingTop="16dp">
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/domain_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentTop="true">
+
+            <AutoCompleteTextView
+                android:id="@+id/domain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentTop="false"
+                android:background="@drawable/border"
+                android:hint="@string/title_domain"
+                android:imeOptions="actionNext"
+                android:inputType="textVisiblePassword"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:id="@+id/username_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/domain_layout"
+            android:paddingTop="10dp">
+
+            <AutoCompleteTextView
+                android:id="@+id/username"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="false"
+                android:layout_alignParentTop="false"
+                android:background="@drawable/border"
+                android:hint="@string/title_username"
+                android:imeOptions="actionNext"
+                android:inputType="textVisiblePassword"
+                android:maxLines="1"
+                android:paddingBottom="10dp"
+                android:paddingLeft="10dp"
+                android:paddingRight="10dp"
+                android:paddingTop="20dp"
+                android:selectAllOnFocus="true"
+                android:singleLine="true"/>
+
+        </android.support.design.widget.TextInputLayout>
+
+        <RelativeLayout
+            android:id="@+id/master_password_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+
+            android:layout_below="@+id/username_layout">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/master_password_text_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/master_password"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:ems="10"
+                    android:hint="@string/title_master_password"
+                    android:inputType="textPassword"
+                    android:maxLines="1"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <ImageButton
+                android:id="@+id/master_password_show"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/master_password_text_layout"
+                android:background="@android:color/transparent"
+                android:paddingLeft="8dp"
+                android:paddingRight="8dp"
+                android:paddingTop="37dp"
+                android:src="@android:drawable/ic_menu_view"/>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/advanced_options_show"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/master_password_layout"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="20dp"
+            android:text="@string/title_advanced_options"/>
+
+        <RelativeLayout
+            android:id="@+id/advanced_options_layout"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/advanced_options_show"
+            android:visibility="gone">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/password_length_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:paddingTop="10dp">
+
+                <com.github.wolandmaster.uniquepasswords.widgets.SuffixedEditText
+                    android:id="@+id/password_length"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:hint="@string/title_password_length"
+                    android:maxLines="1"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:singleLine="true"
+                    app:suffixText="@string/text_characters"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/hash_algorithm_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/password_length_layout"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/hash_algorithm"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:hint="@string/title_hash_algorithm"
+                    android:maxLines="1"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/used_characters_layout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/hash_algorithm_layout"
+                android:paddingTop="10dp">
+
+                <EditText
+                    android:id="@+id/used_characters"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@drawable/border"
+                    android:ellipsize="end"
+                    android:hint="@string/title_used_characters"
+                    android:maxLines="1"
+                    android:paddingBottom="10dp"
+                    android:paddingLeft="10dp"
+                    android:paddingRight="10dp"
+                    android:paddingTop="20dp"
+                    android:singleLine="true"/>
+            </android.support.design.widget.TextInputLayout>
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/password"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/advanced_options_layout"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/round_box"
+            android:fontFamily="monospace"
+            android:gravity="center"
+            android:paddingBottom="25dp"
+            android:paddingTop="25dp"
+            android:textColor="@color/colorWhite"
+            android:textSize="20dp"/>
+
+    </RelativeLayout>
+
+</com.github.wolandmaster.uniquepasswords.widgets.LockableScrollView>

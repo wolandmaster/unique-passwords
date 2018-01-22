@@ -1,0 +1,63 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+        android:key="general_settings"
+        android:persistent="false"
+        android:title="@string/title_general_settings">
+
+        <com.github.wolandmaster.uniquepasswords.widgets.NumberPickerPreference
+            android:defaultValue="@integer/default_password_length"
+            android:key="password_length"
+            android:title="@string/title_password_length"
+            app:maxValue="@integer/max_password_length"
+            app:minValue="@integer/min_password_length"
+            app:textSize="8dp"
+            app:wrapSelectorWheel="false"/>
+
+        <ListPreference
+            android:key="hash_algorithm"
+            android:title="@string/title_hash_algorithm"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="used_characters"
+        android:persistent="false"
+        android:title="@string/title_used_characters">
+
+        <EditTextPreference
+            android:defaultValue="@string/default_char_lowercase"
+            android:inputType="textVisiblePassword"
+            android:key="char_lowercase"
+            android:maxLines="1"
+            android:title="@string/title_char_lowercase"/>
+
+        <EditTextPreference
+            android:defaultValue="@string/default_char_uppercase"
+            android:inputType="textVisiblePassword|textCapCharacters"
+            android:key="char_uppercase"
+            android:maxLines="1"
+            android:title="@string/title_char_uppercase"/>
+
+        <EditTextPreference
+            android:defaultValue="@string/default_char_number"
+            android:inputType="number|textVisiblePassword"
+            android:key="char_number"
+            android:maxLines="1"
+            android:title="@string/title_char_number"/>
+
+        <EditTextPreference
+            android:defaultValue="@string/default_char_special"
+            android:inputType="textVisiblePassword"
+            android:key="char_special"
+            android:maxLines="1"
+            android:title="@string/title_char_special"/>
+    </PreferenceCategory>
+
+    <PreferenceCategory
+        android:key="cached_accounts"
+        android:persistent="false"
+        android:title="@string/title_cached_accounts"/>
+
+</PreferenceScreen>

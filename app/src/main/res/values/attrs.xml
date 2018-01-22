@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<resources>
+    <declare-styleable name="AdjustableNumberPicker">
+        <attr name="textSize" format="dimension"/>
+        <attr name="minValue" format="integer"/>
+        <attr name="maxValue" format="integer"/>
+        <attr name="wrapSelectorWheel" format="boolean"/>
+    </declare-styleable>
+    <declare-styleable name="SuffixedEditText">
+        <attr name="suffixText" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="ValidatableEditTextPreference">
+        <attr name="errorText" format="string"/>
+    </declare-styleable>
+    <declare-styleable name="GifView">
+        <attr name="src" format="reference"/>
+    </declare-styleable>
+</resources>

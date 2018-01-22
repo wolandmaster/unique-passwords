@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <!--Global-->
+    <string name="key_first_run">first_run</string>
+    <string name="key_randomize_input">randomize_input</string>
+    <string name="key_randomize_output">randomize_output</string>
+
+    <!--Settings-->
+    <string name="key_password_length">password_length</string>
+    <string name="key_hash_algorithm">hash_algorithm</string>
+
+    <string name="key_used_characters">used_characters</string>
+    <string name="key_char_lowercase">char_lowercase</string>
+    <string name="key_char_uppercase">char_uppercase</string>
+    <string name="key_char_number">char_number</string>
+    <string name="key_char_special">char_special</string>
+
+    <!--Cached accounts-->
+    <string name="key_account_id">account_id</string>
+    <string name="key_cached_accounts">cached_accounts</string>
+    <string name="key_domain">domain</string>
+    <string name="key_username">username</string>
+
+    <string name="key_account_element">account_element</string>
+    <string name="key_delete_account">delete_account</string>
+
+</resources>

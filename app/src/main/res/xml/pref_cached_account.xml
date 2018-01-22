@@ -1,0 +1,51 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:title="Account">
+
+    <com.github.wolandmaster.uniquepasswords.widgets.ValidatableEditTextPreference
+        android:inputType="textVisiblePassword"
+        android:key="@string/key_domain"
+        android:maxLines="1"
+        android:persistent="false"
+        android:selectAllOnFocus="true"
+        android:title="@string/title_domain"
+        app:errorText="@string/error_domain_must_defined"/>
+
+    <EditTextPreference
+        android:inputType="textVisiblePassword"
+        android:key="@string/key_username"
+        android:maxLines="1"
+        android:persistent="false"
+        android:selectAllOnFocus="true"
+        android:title="@string/title_username"/>
+
+    <com.github.wolandmaster.uniquepasswords.widgets.NumberPickerPreference
+        android:key="@string/key_password_length"
+        android:persistent="false"
+        android:title="@string/title_password_length"
+        app:maxValue="@integer/max_password_length"
+        app:minValue="@integer/min_password_length"
+        app:textSize="8dp"
+        app:wrapSelectorWheel="false"
+        />
+
+    <ListPreference
+        android:key="@string/key_hash_algorithm"
+        android:persistent="false"
+        android:title="@string/title_hash_algorithm"/>
+
+    <EditTextPreference
+        android:inputType="textVisiblePassword"
+        android:key="@string/key_used_characters"
+        android:maxLines="3"
+        android:minLines="3"
+        android:persistent="false"
+        android:title="@string/title_used_characters"/>
+
+    <Preference
+        android:key="delete_account"
+        android:persistent="false"
+        android:title="@string/action_delete_account"/>
+
+</PreferenceScreen>

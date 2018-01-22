@@ -1,0 +1,18 @@
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.wolandmaster.uniquepasswords.widgets.AdjustableNumberPicker
+        android:layout_width="wrap_content"
+        android:id="@+id/password_length"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:title="@string/title_password_length"
+        app:maxValue="@integer/max_password_length"
+        app:minValue="@integer/min_password_length"
+        app:textSize="8dp"
+        app:wrapSelectorWheel="false"/>
+
+</FrameLayout>
